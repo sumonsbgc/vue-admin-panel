@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#kr-wrapper{
+  @apply bg-gray-200 grid grid-cols-12  h-screen;
+}
+
+#left-sidebar{
+  @apply col-span-2 flex shadow-xl flex-col py-4 bg-gradient-to-b from-blue-600 to-green-400;
+}
+.sidebar-brand{
+  @apply flex items-center w-full justify-between;
+}
+.brand-logo{
+  @apply w-10 mx-2 flex items-center content-between;
+}
+
+.brand-logo img{
+  @apply w-10 h-auto mr-2;
+}
+
+.collapse-menu img{
+  @apply w-5 cursor-pointer;
+}
+
+#main-content{
+  @apply col-span-10 flex flex-col relative;
+}
+
+header{
+  @apply flex items-center w-full bg-gray-50 shadow-sm sticky top-0 z-50;
+}
+
+#header-nav-menu {
+  @apply flex px-6;
+}
+
+#header-nav-menu li a{
+  @apply flex flex-col items-center py-2 px-1 w-20 hover:bg-gray-200;
+}
+
+#header-nav-menu li .router-link-exact-active{
+  @apply bg-gray-200;
+}
+
+#header-nav-menu li a img{
+  @apply w-8 h-8;
+}
+
+#header-nav-menu li a span{
+  @apply text-sm text-black;
+}
+
+#content{
+  @apply p-8;
+}
+
+
+footer{
+  @apply w-full absolute bottom-0 bg-gray-800 px-5 py-2 text-white;
+}
