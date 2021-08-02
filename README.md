@@ -1,4 +1,4 @@
-# admin
+# KR Admin Panel
 
 ## Project setup
 ```
