@@ -1,8 +1,12 @@
 <template>
   <div id="kr-wrapper">
-    <Sidebar v-show="displaySidebar"></Sidebar>
-    <main class="main-content" id="main-content">
-      <Header></Header>
+    <Sidebar :open="showSidebar"></Sidebar>
+    <main
+      class="main-content"
+      id="main-content"
+      :class="{ 'full-content': !showSidebar }"
+    >
+      <Header @toggle_Sidebar="showSidebar = !showSidebar"></Header>
       <div class="content" id="content">
         <router-view />
       </div>
@@ -16,23 +20,22 @@ import Sidebar from "@/components/Sidebar.vue";
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 
-export default {  
+export default {
   components: {
     Sidebar,
     Header,
     Footer,
   },
-  data(){
-    return{
-      displaySidebar: true;
-    }
+  data() {
+    return {
+      showSidebar: true,
+    };
   },
 
   methods: {
-    toggleSidebar: function(){
-      $this->displaySidebar = !$this->displaySidebar;
-    }
-  }
-
+    displaySidebar: () => {
+      this.showSidebar = !this.showSidebar;
+    },
+  },
 };
 </script>

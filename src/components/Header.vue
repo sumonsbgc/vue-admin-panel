@@ -1,6 +1,10 @@
 <template>
   <header>
-    <div class="collapse-menu ml-3" id="header-collapse-menu" @click=$emit("toggleSidebar")>
+    <div
+      class="collapse-menu ml-3"
+      id="header-collapse-menu"
+      @click="toggleSidebar"
+    >
       <img src="../assets/images/list.svg" alt="" />
     </div>
     <ul class="nav-menu" id="header-nav-menu">
@@ -29,5 +33,10 @@
 <script>
 export default {
   name: "Header",
+  methods: {
+    toggleSidebar: function () {
+      this.$emit("toggle_Sidebar");
+    },
+  },
 };
 </script>
