@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="collapse-menu ml-3" id="header-collapse-menu">
+    <div class="collapse-menu ml-3" id="header-collapse-menu" @click=$emit("toggleSidebar")>
       <img src="../assets/images/list.svg" alt="" />
     </div>
     <ul class="nav-menu" id="header-nav-menu">
